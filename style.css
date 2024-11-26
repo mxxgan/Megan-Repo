@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 10px 20px;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
+.navigation.bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    background-color: #fbedfd; /* Or any color you prefer */
+        }
+
+ul {
+  position: -webkit-sticky; 
+  position: sticky;
+}
+
+.video-container {
+    width: 100%; /* Full width of the website */
+    overflow: hidden; /* Prevent any overflow issues */
+}
+
+.video-container video {
+    width: 100%; /* Makes the video stretch to the container's width */
+    height: auto; /* Maintains aspect ratio */
+}
+
+
+
+
