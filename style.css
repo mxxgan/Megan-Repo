@@ -6,10 +6,11 @@ body {
 
 header h1 {
     text-align: center;
+    font-family: 'Nunito';
 }
 
 h2 {
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Nunito';
 }
 
 .logo {
@@ -23,20 +24,21 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Nunito';
     padding: 20px;
-    background-color: #fbedfd;
+    background-color: #fce8fb;
 }
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
 
 .description {
     text-align: center;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.7);
-}
-
-
-ul {
-  position: -webkit-sticky; 
-  position: sticky;
+    background-color: rgb(233, 248, 253);
 }
 
 .video-container {
@@ -50,18 +52,36 @@ ul {
     height: auto; 
 }
 
-
 footer {
     text-align: center;
     position: relative;
     padding: 3px;
-    background-color: #fbedfd;
+    background-color: #fce8fb;
     color: rgb(0, 0, 0);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito';
   }
 
-/* homepage */
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
 
+.links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+
+/* homepage */
+/* upcoming */
 .boxes {
     display: flex;
     justify-content: center;
@@ -69,7 +89,6 @@ footer {
     margin: 40px auto; /* Adds spacing above and below the boxes */
     flex-wrap: wrap;
 }
-
 
 .box {
     background-size: cover; /* Ensures the image covers the entire box */
@@ -86,32 +105,153 @@ footer {
     font-weight: bold;
     text-shadow: 5px 3px 5px rgba(3, 0, 99, 0.7); 
 }
-
+/* shows */
 .box-shows {
     background-image: url(image/show.jpeg);
 }
-
+/* tour */
 .box-tour {
     background-image: url(image/tour.jpeg);
 }
-
+/* albums */
 .box-albums {
     background-image: url(image/album.jpeg);
 }
+/* fanart */
+.gallery {
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    padding: 20px;
+    background-color: rgb(214, 236, 244);
+}
 
-/* Members page  */
-.box:hover {
-    transform: scale(1.05);
+/* About page */
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(233, 248, 253);
+}
+
+.background-about {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;    
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(233, 248, 253);
+}
+
+.background-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.fandom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #d7eeff; /* Light blue background */
+}
+
+.fandom-info {
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center; 
+    text-align: center; 
+    background-color: #d7eeff;
+}
+
+.fandom-images {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    margin-top: 20px; 
+}
+
+.fandom-images img {
+    width: 350px; 
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Add rounded corners to images */
+}
+
+.discography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #ebf6ff; 
+}
+
+.disco-grid {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+
+.disco-card {
+    background-color: #ebf6ff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative; 
+}
+
+.disco-card img {
+    width: 200px; 
+    height: 300px; 
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border-radius: 10px; 
+  }
+
+.disco-card img:hover {
+    transform: scale(1.1); 
     transition: all 0.3s ease;
-
 }
 
 
+.disco-overlay{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Text color */
+    font-size: 17px; /* Text size */
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.6); 
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+
+
+/* Members page  */
 #flexbox{
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit;        /* Inherits the text color from its parent */
+}
+
+a:hover {
+    text-decoration: none; 
+    color: #445783;       
 }
 
 /* Member page */
@@ -122,7 +262,6 @@ footer {
     margin: 20px;
     padding: 20px;
     background-color: rgb(233, 248, 253);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .profile-header {
@@ -138,28 +277,31 @@ footer {
     padding: 20px;
 }
 
-
 .fact-image {
-    width: 100%;
+    margin: 10px;
     height: 200px;
-    background-color: #ccc;
-    margin-bottom: 10px;
-    display: flex;
     flex-wrap: wrap;
-    float: center;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+    float: left;
+    width: 250px;
     border-radius: 10px;
-}
+    justify-content: center;
+    transition: all 0.3s ease;
+    background-color: #ccc;
+    text-align: center;
+    overflow: hidden; /* Prevents content overflow */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
 
-.fact-item p {
-    margin: 0;
-    font-size: 1rem;
+
+.fact-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the box */
+    border-radius: inherit; /* Matches the border-radius of the parent */
 }
 
 .fact-item {
-    background-color: white;
+    background-color: rgb(236, 236, 236);
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -192,4 +334,130 @@ footer {
     line-height: 1.6; /* Improves readability */
 }
 
+
+/* media page */
+.pic {
+    position: relative;
+    width: 80%; 
+    margin: 20px auto; /* Center the slideshow horizontally */
+    height: 60vh; /* Adjust height proportionally */
+    border-radius: 20px; /* Add rounded corners */
+    overflow: hidden; /* Ensure image stays within the rounded corners */
+}
+
+.media-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: 1;
+}
+
+.media-image:first-child {
+    display: block; /* Show first image by default */
+}
+
+.media-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Arial, sans-serif;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 50%;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.arrow-left {
+    left: 10px; /* Move left arrow to the left side */
+}
+
+.arrow-right {
+    right: 10px; /* Move right arrow to the right side */
+}
+
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    z-index: 10; /* Ensure dots are above other elements */
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 9px;
+    margin: 0 5px;
+    background-color:#ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.content-section {
+    margin-bottom: 40px;
+}
+
+.content-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Flex Container */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    gap: 20px; /* Adds space between the cards */
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+  
+.content-card img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 3%; 
+}
+
+.content-card img:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    transition: all 0.3s ease;
+}
+
+.content-card-text {
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+
+/* responsiveness */
 

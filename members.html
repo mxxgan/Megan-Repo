@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Reenie+Beanie&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+3D&display=swap" rel="stylesheet">
+
+    
     <style>
         body {
             display: flex;
@@ -20,9 +23,10 @@
             width: 250px;
             border: 5px solid transparent;
             border-radius: 10px;
-            float: center;
             transition: all 0.3s ease;
             background-color: white;
+            text-align: center;
+            overflow: hidden; /* Prevents content overflow */
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
             }
         
@@ -39,99 +43,113 @@
           padding: 15px;
           text-align: center;
         }
-
         </style>
 </head>
 
-
 <body>
     <nav class="navigation-bar">
-        <a href="#" class="nav-item">home</a>
-        <a href="#" class="nav-item">about</a>
+        <a href="index.html" class="nav-item">home</a>
+        <a href="about.html" class="nav-item">about</a>
         <div class="logo">Cherrycoups<br>ENT</div>
-        <a href="#" class="nav-item">members</a>
-        <a href="#" class="nav-item">media</a>
+        <a href="members.html" class="nav-item">members</a>
+        <a href="media.html" class="nav-item active">media</a>
     </nav>
-    
+
     <header>
         <h1>MEMBERS</h1>
     </header>
 
-    <div id=" flexbox">
+    <div id="flexbox">
         <div class="gallery">
-            <img src="image/scoups.jpg" alt="Photo of S.Coups from SEVENTEEN" width="600" height="400">
+            <a href="member.html">
+            <img src="image/scoups.jpg" alt="scoups" width="500" height="200">
             <div class="desc">S.Coups (에스쿱스)</div>
+            </a>
         </div>
     
         <div class="gallery">
-            <img src="image/jeonghan.jpg" alt="Photo of Jeonghan from SEVENTEEN" width="600" height="400">
+            <img src="image/jeonghan.jpg" alt="jeonghan" width="500" height="200">
             <div class="desc">Jeonghan (정한)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/joshua.jpg" alt="Photo of Joshua from SEVENTEEN" width="600" height="400">
+            <img src="image/joshua.jpg" alt="joshua" width="600" height="400">
             <div class="desc">Joshua (조슈아)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/jun.jpg" alt="Photo of Jun from SEVENTEEN" width="600" height="400">
+            <img src="image/jun.jpg" alt="jun" width="600" height="400">
             <div class="desc">Jun (준)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/hoshi.jpg" alt="Photo of Hoshi from SEVENTEEN" width="600" height="400">
+            <img src="image/hoshi.jpg" alt="hoshi" width="600" height="400">
             <div class="desc">Hoshi (호시)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/wonwoo.jpg" alt="Photo of Wonwoo from SEVENTEEN" width="600" height="400">
+            <img src="image/wonwoo.jpg" alt="wonwoo" width="600" height="400">
             <div class="desc">Wonwoo (원우)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/woozi.jpg" alt="Photo of Woozi from SEVENTEEN" width="600" height="400">
+            <img src="image/woozi.jpg" alt="woozi" width="600" height="400">
             <div class="desc">Woozi (우지)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/dokyeom.jpg" alt="Dokyeom" width="600" height="400">
-        </a>
+            <img src="image/dokyeom.jpg" alt="dokyeom" width="600" height="400">
         <div class="desc">Dokyeom (도겸)</div>
         </div>
 
         <div class="gallery">
-            <img src="image/mingyu.jpg" alt="Mingyu" width="600" height="400">
-        </a>
+            <img src="image/mingyu.jpg" alt="mingyu" width="600" height="400">
         <div class="desc">Mingyu (민규)</div>
         </div>
         
         <div class="gallery">
-            <img src="image/minghao.jpg" alt="Minghao" width="600" height="400">
-        </a>
+            <img src="image/minghao.jpg" alt="minghao" width="600" height="400">
         <div class="desc">The8 (디에잇)</div>
         </div>
 
         <div class="gallery">
             <img src="image/seungkwan.jpg" alt="Seungkwan" width="600" height="400">
-        </a>
         <div class="desc">Seungkwan (승관)</div>
         </div>
 
         <div class="gallery">
             <img src="image/vernon.jpg" alt="Vernon" width="600" height="400">
-        </a>
         <div class="desc">Vernon (버논)</div>
         </div>
 
         <div class="gallery">
             <img src="image/dino.jpg" alt="Dino" width="600" height="400">
-        </a>
         <div class="desc">Dino (디노)</div>
         </div>
+    </div> 
 
-    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="section">
+                <h3>Social Media</h3>
+                <div class="links">
+                    <a href="https://www.instagram.com/saythename_17?igsh=YjBsNjNoZnlvNnV6">Instagram</a>
+                    <a href="https://www.tiktok.com/@seventeen17_official?_t=8rqeQwKKNqz&_r=1">Tiktok</a>
+                    <a href="https://twitter.com/pledis_17">Twitter</a>
+                    <a href="https://weverse.io/seventeen/feed">Weverse</a>
+                    <a href="https://www.youtube.com/c/SEVENTEEN">YouTube</a>
+            </div>
+            </div>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:official@pledis.com">official@pledis.com</a></p>
+        </div>
+        <div class="footer-section">
+            <p>&copy; 2024 SEVENTEEN. All Rights Reserved.</p>
+        </div>
+    </footer>
 
-    
     
 </body>
 </html>
