@@ -3,7 +3,6 @@
     <head>
         <meta charset = "UTF-8" />
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+3D&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Reenie+Beanie&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Rock+3D&display=swap" rel="stylesheet">
 
 
@@ -28,6 +27,21 @@
                 text-align: center;
             }
 
+            .logo {
+            font-family: 'Reenie Beanie';
+            font-size: 2em;
+            color: #851515; 
+        }
+
+            #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background-color: #94aacf; /* You can change the color */
+            width: 0; /* Starts at 0% */
+            z-index: 1000;
+        }
         </style>
     </head>
     <body>
@@ -88,30 +102,44 @@
                 <img src="image/alwayscold__ on ig.jpeg" alt="caratcore">
             </div>
             <p></p>
+            <button id="changeColorBtn">Colors of CARAT</button>
             <p></p>
-            <!-- <img src="image/download (11).jpeg" alt="caratbong"> -->
+            <p></p>
         </section>
 
-        <section class="discography">
-            <h2><U>Discography</U></h2>
-            <p>Discover some of the iconic albums released by SEVENTEEN:</p>
-            <div class="disco-grid">
-                <div class="disco-card">
-                    <img src="image/Lockscreen Seventeen.jpeg" alt="album 1">
-                    <div class ="disco-overlay">SEVENTEEN 11th Mini Album 'SEVENTEENTH HEAVEN' 2023</div>
-                </div>
 
-                <div class="disco-card">
-                    <img src="image/sector17.jpeg" alt="album 2">
-                    <div class="disco-overlay">SEVENTEEN SEVENTEEN 4th Album Repackage 'SECTOR 17' 2022</div>
+        <div id="scroll-progress"></div>
+            <section class="discography">
+                <h2><U>Discography</U></h2>
+                <p>Discover some of the iconic albums released by SEVENTEEN:</p>
+                <div class="disco-grid">
+                    <div class="disco-card">
+                        <img src="image/Lockscreen Seventeen.jpeg" alt="album 1">
+                        <div class ="disco-overlay">SEVENTEEN 11th Mini Album 'SEVENTEENTH HEAVEN'</div>
+                    </div>
+
+                    <div class="disco-card">
+                        <img src="image/sector17.jpeg" alt="album 2">
+                        <div class="disco-overlay">SEVENTEEN SEVENTEEN 4th Album Repackage 'SECTOR 17'</div>
+                    </div>
+                    
+                    <div class="disco-card">
+                        <img src="image/download (13).jpeg" alt="album 3">
+                        <div class="disco-overlay">SEVENTEEN 8th Mini Album 'YOUR CHOICE'</div>
+                    </div>
+
+                    <div class="disco-card">
+                        <img src="image/seventeen wallpaper.jpeg" alt="album 2">
+                        <div class="disco-overlay">SEVENTEEN 7th Album 'Heng:garae'</div>
+                    </div>
+                    
+                    <div class="disco-card">
+                        <img src="image/Maestro _ Seventeen.jpeg" alt="album 3">
+                        <div class="disco-overlay">SEVENTEEN 12th Mini Album 'Maestro'</div>
+                    </div>
                 </div>
-                
-                <div class="disco-card">
-                    <img src="image/Seventeen ot_ 13 wallpaper.jpeg" alt="album 3">
-                    <div class="disco-overlay">SEVENTEEN 13th Mini Album 'SPILL THE FEELS (세븐틴)'</div>
-                </div>
-            </div>
-        </section>
+            </section>
+        
 
         <footer class="footer">
             <div class="container">
@@ -134,7 +162,20 @@
                 <p>&copy; 2024 SEVENTEEN. All Rights Reserved.</p>
             </div>
         </footer>
- 
+
+        <script src="script.js"></script>
+
+        <script>
+            window.onscroll = function() {
+            let scrolled = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+            }
+            
+            document.getElementById("changeColorBtn").addEventListener("click", function() {
+            var button = document.getElementById("changeColorBtn");
+            button.style.backgroundColor = button.style.backgroundColor === "pink" ? "blue" : "pink";
+        });
+        </script>
 
     </body>
 </html>

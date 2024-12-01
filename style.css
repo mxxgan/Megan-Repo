@@ -234,8 +234,16 @@ footer {
 
 
 
-
 /* Members page  */
+
+.description-members {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Reenie Beanie';
+    font-size: 20px;
+    background-color: rgb(233, 248, 253);
+}
+
 #flexbox{
     display: flex;
     flex-wrap: wrap;
@@ -301,7 +309,9 @@ a:hover {
 }
 
 .fact-item {
-    background-color: rgb(236, 236, 236);
+    background-image: url('image/wallpaper pink soft.jpeg');
+    background-size: cover;
+    background-position: center;
     padding: 20px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -334,6 +344,12 @@ a:hover {
     line-height: 1.6; /* Improves readability */
 }
 
+.playlist {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+}
+
 
 /* media page */
 .pic {
@@ -343,6 +359,10 @@ a:hover {
     height: 60vh; /* Adjust height proportionally */
     border-radius: 20px; /* Add rounded corners */
     overflow: hidden; /* Ensure image stays within the rounded corners */
+}
+
+.main h2 {
+    padding: 20px; 
 }
 
 .media-image {

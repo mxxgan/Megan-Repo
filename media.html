@@ -19,6 +19,21 @@
                 text-align: center;
             }
 
+            .logo {
+            font-family: 'Reenie Beanie';
+            font-size: 2em;
+            color: #851515; }
+
+            #scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 5px;
+            background-color: #94aacf; /* You can change the color */
+            width: 0; /* Starts at 0% */
+            z-index: 1000;
+        }
+
         </style>
     </head>
     <body>
@@ -128,6 +143,9 @@
                 </div>
             </div>
         </section>
+
+        <div id="scroll-progress"></div>
+
         
         <footer class="footer">
             <div class="container">
@@ -150,6 +168,16 @@
                 <p>&copy; 2024 SEVENTEEN. All Rights Reserved.</p>
             </div>
         </footer>
+
+        <script src="script.js"></script>
+
+        <script>
+            window.onscroll = function() {
+            let scrolled = (document.documentElement.scrollTop || document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight) * 100;
+            document.getElementById('scroll-progress').style.width = scrolled + '%';
+            }
+
+        </script>
  
 
     </body>
